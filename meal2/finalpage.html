@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .submit {
+            float: right;
+            position: relative;
+            right: 80px;
+            margin: 20px;
+        }
+
+        .back {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend> Review </legend>
+            <div class="row" id="finalreview">
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+            <br>
+            <br>
+
+            <button class="back btn btn-primary" onclick="backbtn()">Back </button>
+            <button class="submit btn btn-primary" onclick="submitbtn()">Submit</button>
+
+
+
+
+        </fieldset>
+    </div>
+
+
+
+
+
+    <script>
+        let divfinal = document.getElementById('finalreview');
+
+        const Rest = localStorage.getItem('Rest');
+        const Type = localStorage.getItem('Type');
+        const NoPeople = localStorage.getItem('NoPeople');
+        const Mealtype = localStorage.getItem('Mealtype');
+        const count = localStorage.getItem('count');
+        const Mealtypeone = localStorage.getItem('Mealtypeone');
+        const Mealtypetwo = localStorage.getItem('Mealtypetwo');
+        const Mealtypethree = localStorage.getItem('Mealtypethree');
+        const count1 = localStorage.getItem('count1');
+        const count2 = localStorage.getItem('count2');
+        const count3 = localStorage.getItem('count3');
+        divfinal.innerHTML = `
+<div class="col-sm-6"><h2>Type Of Meal :</h2></div>
+                <div class="col-sm-6"> <h2>${Type}</h2></div>
+
+                <div class="col-sm-6"><h2>No. of People :</h2></div>
+                <div class="col-sm-6"><h2>${NoPeople}</h2></div>
+
+
+                <div class="col-sm-6"><h2>Restaurant :</h2></div>
+                <div class="col-sm-6"><h2>${Rest}</h2></div>
+
+
+                <div class="col-sm-5"><h2>Meal  1 :</h2></div>
+                <div class="col-sm-5"><h2>${Mealtype}</h2></div>
+                <div class="col-sm-2"><h3>${count}</h3></div>
+
+
+
+
+                <div class="col-sm-5"><h2>Meal  2 :
+                </h2></div>
+                <div class="col-sm-5"><h2>${Mealtypeone} </h2></div>
+                <div class="col-sm-2"> <h2> ${count1} </h2></div>
+
+
+
+
+                <div class="col-sm-5"><h2>Meal  3 :</h2></div>
+                <div class="col-sm-5"><h2> ${Mealtypetwo}</h2></div>
+                <div class="col-sm-2"><h2>${count2}</h2></div>
+
+
+
+
+                <div class="col-sm-5"><h2>Meal  4 :</h2></div>
+                <div class="col-sm-5"><h2> ${Mealtypethree} </h2></div>
+                <div class="col-sm-2"><h2>${count3}</h2></div>
+
+
+
+`
+        function backbtn() {
+            window.history.back();
+
+
+        }
+
+
+        // window.location.href='finalpage.html'
+
+
+    </script>
+
+
+</body>
+
+</html>

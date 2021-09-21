@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Step 2</legend> 
+            <div class="two" id="two_lunch">
+                <select class="form-control form-control-lg" id="lunch" onclick="mylunch()">
+                    <!-- <option value="none">Select Restaurant</option>
+                    <option value="Mc Donalds">Mc Donalds</option>
+                    <option value="Vege Deli">Vege Deli</option>
+                    <option value="Olive Garden">Olive Garden</option>
+                    <option value="Taco Bell">Taco Bell</option>
+                    <option value="Pizzeria">Pizzeria</option>
+                    <option value="Panda Express">Panda Express</option> 
+                <option value="BBQ">BBQ</option> -->
+
+
+                </select>
+                <h6 class="vali" id="twolunch">This field is required</h6>
+                <br>
+                <button class="btn btn-primary " onclick="backmain_lunch()"> Back</button>
+
+                <button class="btn btn-primary mybtn" onclick="validatetwo_lunch()"> Submit</button>
+
+
+
+            </div>
+
+
+
+
+
+
+        </fieldset>
+    </div>
+    
+
+<script>
+    function mylunch() {
+    let s2_one = document.getElementById('lunch').value;
+    let s2_oneh = document.getElementById('twolunch');
+
+    if (s2_one == 'none') {
+        s2_oneh.style.display = 'inline';
+    }
+    if (s2_one !== 'none') {
+        s2_oneh.style.display = 'none';
+    }
+
+    console.log(s2_one);
+
+
+}
+
+function backmain_lunch() {
+    window.history.back();
+
+
+}
+function validatetwo_lunch() {
+    let s2_1 = document.getElementById('lunch').value;
+    let s2_1h = document.getElementById('twolunch');
+
+
+
+    if (s2_1 == 'none') {
+        s2_1h.style.display = 'inline';
+    } if (s2_1 !== 'none') {
+        s2_1h.style.display = 'none';
+    }
+    if(s2_1=='Mc Donalds'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'mclunch.html'
+
+    }
+    if(s2_1=='Vege Deli'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'vegelunch.html'
+
+    }
+    if(s2_1=='Olive Garden'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'olilunch.html'
+
+    }
+    if(s2_1=='Taco Bell'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'tacolunch.html'
+
+    }
+    if(s2_1=='Pizzeria'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'pizalunch.html'
+
+    }
+    if(s2_1=='Panda Express'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'pandalunch.html'
+
+    }
+    if(s2_1=='BBQ Hut'){
+        localStorage.setItem('Rest', s2_1);
+        window.location.href = 'bbq.html'
+
+    }
+
+
+}
+const rr = JSON.parse(localStorage.getItem('task'));
+console.log(rr);
+console.log(rr[4].availableMeals[0]);
+
+const lunch_dom = document.getElementById('lunch');
+
+lunch_dom.innerHTML = `<option value="none">Select Restaurant</option>
+                    <option value="Mc Donalds">${rr[4].restaurant}</option>
+                    <option value="Vege Deli">${rr[13].restaurant}</option>
+                    <option value="Olive Garden">${rr[29].restaurant}</option>
+                    <option value="Taco Bell">${rr[7].restaurant}</option>
+                    <option value="Pizzeria">${rr[20].restaurant}</option>
+                    <option value="Panda Express">${rr[25].restaurant}</option>
+                    <option value="BBQ Hut">${rr[11].restaurant}</option>`
+
+
+
+
+</script>
+
+    
+</body>
+</html>

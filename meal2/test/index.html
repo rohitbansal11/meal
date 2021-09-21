@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>test</title>
+    <style>
+        .dish,
+        .dishone,
+        .dishtwo,
+        .dishthree 
+        
+        {
+            display: none;
+        }
+        .count{
+            width: 20px;
+        }
+        td{
+            justify-content: center;
+            align-items: center;
+        }
+        .para{
+            display: none;
+            color: red;
+        }
+        .dishone{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+<br>
+<br>
+<br>
+
+
+<fieldset>
+    <legend>Step 3</legend>
+    <select name="my dish" id="mydish" onclick="myselect()">
+        <option value="none">Select Meal</option>
+    </select>
+
+    <p class="para" id="para">this field is required</p>
+<br>
+    <div class="dishone" id="dishone">
+        <select name="mydishone" id="mydishone" onclick="myselectone()">
+            <option value="none">Select Meal</option>
+        </select>
+        <p class="para" id="para">this field is required</p>
+    </div>
+<br>
+    <div class="dishtwo" id="dishtwo">
+        <select name="mydishtwo" id="mydishtwo" onclick="myselectwo()">
+            <option value="none">Select Meal</option>
+        </select>
+        <p class="para" id="para">this field is required</p>
+    </div>
+<br>
+    <div class="dishthree" id="dishthree">
+        <select name="mydishthree" id="mydishthree" onclick="myselecthree()">
+            <option value="none">Select Meal</option>
+        </select>
+        <p class="para" id="para">this field is required</p>
+    </div>
+
+
+    <button onclick="addbtn()">Add button</button>
+    <!-- <select name="my dish" id="mydish" onclick="myselect()">
+        <option value="none">Select Meal</option>
+    </select>
+    <p class="para" id="para">this field is required</p>
+
+    <select name="my dish" id="mydish" onclick="myselect()">
+        <option value="none">Select Meal</option>
+    </select>
+    <p class="para" id="para">this field is required</p>
+
+    <select name="my dish" id="mydish" onclick="myselect()">
+        <option value="none">Select Meal</option>
+    </select>
+    <p class="para" id="para">this field is required</p> -->
+    
+
+
+
+
+   
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-3">
+            <button class="btn ">Back</button>
+        </div>
+        <div class="col-sm-6">    </div>
+        <div class="col-sm-3">
+
+            <button class="btn " onclick="mcsub()"> Submit</button>
+        </div>
+    </div>
+</div>
+
+</fieldset>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
